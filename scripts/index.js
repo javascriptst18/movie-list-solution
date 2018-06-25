@@ -1,5 +1,7 @@
+let url = `https://javascriptst18.herokuapp.com/trending?q=${search}`;
+
 function getMovies(search = '') {
-  $.getJSON(`https://javascriptst18.herokuapp.com/trending?q=${search}`, function (allMovies) {
+  $.getJSON(url, function (allMovies) {
     const container = document.querySelector('.container');
     let html = '';
     for (let movie of allMovies) {
