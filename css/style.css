@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  width: 100vw;
+  font: 100% / 2 "Roboto Mono", monospace;
+  color: #2d2d2d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+ 
+ *, *::after, *::before {
+  box-sizing: border-box;  
+ }
+
+.card {
+  width: 90%;
+  padding: 1rem 2rem;
+  margin: 0 auto 2rem auto;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+input{
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 1rem auto;
+}
