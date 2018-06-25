@@ -29,22 +29,5 @@ function addSearchEvent() {
   })
 }
 
-
-
-
-
 getMovies();
 addSearchEvent();
-
-
-
-// function calculate(a, b, operator) {
-//   const result = operator(a, b);
-//   console.log(result);
-// }
-
-// function add(a, b) {
-//   return a + b;
-// }
-
-// calculate(5, 5, add);
