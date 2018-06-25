@@ -1,8 +1,10 @@
 async function getMovies(search = '') {
   let url = `https://javascriptst18.herokuapp.com/trending?q=${search}`;
-  let responseObject = await fetch(url);
-  let allMovies = await responseObject.json();
-  createHTML(allMovies);
+  fetch(url)
+    .then((response) => response.json())
+    .then((allMovies) => {
+      createHTML(allMovies);
+    });
 }
 
 function createHTML(allMovies) {
