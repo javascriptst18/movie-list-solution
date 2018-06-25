@@ -1,8 +1,8 @@
-function getMovies(search = '') {
+async function getMovies(search = '') {
   let url = `https://javascriptst18.herokuapp.com/trending?q=${search}`;
-  $.getJSON(url, function (allMovies) {
-    createHTML(allMovies);
-  })
+  let responseObject = await fetch(url);
+  let allMovies = await responseObject.json();
+  createHTML(allMovies);
 }
 
 function createHTML(allMovies) {
@@ -27,5 +27,22 @@ function addSearchEvent() {
   })
 }
 
+
+
+
+
 getMovies();
 addSearchEvent();
+
+
+
+// function calculate(a, b, operator) {
+//   const result = operator(a, b);
+//   console.log(result);
+// }
+
+// function add(a, b) {
+//   return a + b;
+// }
+
+// calculate(5, 5, add);
